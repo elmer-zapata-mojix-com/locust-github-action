@@ -1,6 +1,6 @@
 FROM python:3.8.3-buster
 
-RUN pip install locust==2.29.1
+RUN pip install locust==2.25.0
 
 COPY locustfile.py /locustfile.py
 COPY entrypoint.sh /entrypoint.sh
