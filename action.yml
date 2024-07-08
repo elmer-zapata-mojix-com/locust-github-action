@@ -23,6 +23,10 @@ inputs:
     description: 'Specify the run time for a test. Defaults to 10 seconds.'
     required: false
     default: '10s'
+  html:
+    description: 'Specify the name for the html result'
+    required: false
+    default: 'report.html'  
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -33,6 +37,7 @@ runs:
     - ${{ inputs.USERS }}
     - ${{ inputs.RATE }}
     - ${{ inputs.RUNTIME }}
+    - ${{ inputs.html }}
 branding:
   icon: 'link'
   color: 'green'
